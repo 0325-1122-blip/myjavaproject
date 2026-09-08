@@ -2,23 +2,23 @@ package myjavaproject;
 
 import java.util.Scanner;
 
-// Item Class with OOP concepts applied
+
 class Item {
     private String name;
     private double price;
     private int quantity;
 
-    // 1. Basic Constructor with Constructor Chaining
+    //  Basic Constructor with Constructor Chaining
     public Item() {
         this("Default Item", 0.0, 1);
     }
 
-    // 2. Overloaded Constructor (2 Parameters) with Constructor Chaining
+    // Overloaded Constructor with Constructor Chaining
     public Item(String name, double price) {
         this(name, price, 1);
     }
 
-    // 3. Overloaded Constructor (3 Parameters) using 'this' keyword
+    // 3. Overloaded Constructor using 'this' keyword
     public Item(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
@@ -35,7 +35,7 @@ class Item {
     }
 }
 
-// Main Class containing Menu System
+// Main Class Menu System
 public class myjavaproject {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -69,8 +69,10 @@ public class myjavaproject {
                     if (itemCount < cart.length) {
                         System.out.print("Enter item name: ");
                         String name = scanner.nextLine();
+                        
                         System.out.print("Enter price: ");
                         double price = scanner.nextDouble();
+                        
                         cart[itemCount++] = new Item(name, price);
                         System.out.println("Item added successfully!");
                     } else {
@@ -82,10 +84,13 @@ public class myjavaproject {
                     if (itemCount < cart.length) {
                         System.out.print("Enter item name: ");
                         String name = scanner.nextLine();
+                        
                         System.out.print("Enter price: ");
                         double price = scanner.nextDouble();
+                        
                         System.out.print("Enter quantity: ");
                         int qty = scanner.nextInt();
+                        
                         cart[itemCount++] = new Item(name, price, qty);
                         System.out.println("Item added successfully!");
                     } else {
